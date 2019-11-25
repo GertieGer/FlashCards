@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import '../Widgets/MemCard.dart';
 import '../Classes/cardinfo.dart';
 
+import 'package:flip_card/flip_card.dart';
+
 class CardPage extends StatelessWidget {
   
-  MemCard demoCard = new MemCard(new CardInfo(["","Front"], ["","Back"]));
+  final MemCard demoCard = new MemCard(new CardInfo(["","Front"], ["","Back"]));
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,11 @@ class CardPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Avatar'),
       ),
-      body: demoCard,
+      body: Column(
+        children: <Widget>[
+          Text("im working"),
+          demoCard,
+        ]),
     );
   }
 }
